@@ -124,7 +124,7 @@ export class App {
 
     // Handle the last known state (if any) as an incoming update
     // This triggers the main update pipeline and enables centralized update handling
-    serverRegistration.updateServerStatus(payload, this.publicConfig.minecraftVersions)
+    serverRegistration.updateServerStatus(payload)
 
     // Allow the ServerRegistration to bind any DOM events with app instance context
     serverRegistration.initEventListeners()

@@ -42,7 +42,7 @@ export class PercentageBar {
     div.style.background = serverRegistration.data.color
 
     div.setAttribute('class', 'perc-bar-part')
-    div.setAttribute('minetrack-server-id', serverRegistration.serverId)
+    div.setAttribute('samptrack-server-id', serverRegistration.serverId)
 
     this._parent.appendChild(div)
 
@@ -54,7 +54,7 @@ export class PercentageBar {
   }
 
   handleMouseOver = (event) => {
-    const serverId = parseInt(event.target.getAttribute('minetrack-server-id'))
+    const serverId = parseInt(event.target.getAttribute('samptrack-server-id'))
     const serverRegistration = this._app.serverRegistry.getServerRegistration(serverId)
 
     this._app.tooltip.set(event.target.offsetLeft, event.target.offsetTop, 10, this._parent.offsetTop + this._parent.offsetHeight + 10,

@@ -2,7 +2,7 @@ import uPlot from 'uplot'
 
 import { RelativeScale } from './scale'
 
-import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress, formatMinecraftVersions } from './util'
+import { formatNumber, formatTimestampSeconds, formatDate } from './util'
 import { uPlotTooltipPlugin } from './plugins'
 
 import MISSING_FAVICON from 'url:../images/missing_favicon.svg'
@@ -108,7 +108,7 @@ export class ServerRegistration {
           y: false
         },
         sync: {
-          key: 'minetrack-server',
+          key: 'samptrack-server',
           setSeries: true
         }
       },
@@ -220,11 +220,7 @@ export class ServerRegistration {
     element.style.display = 'none'
   }
 
-  updateServerStatus (ping, minecraftVersions) {
-    if (ping.versions) {
-      this._renderValue('version', formatMinecraftVersions(ping.versions, minecraftVersions[this.data.type]) || '')
-    }
-
+  updateServerStatus (ping) {
     if (ping.recordData) {
       this._renderValue('record', (element) => {
         if (ping.recordData.timestamp > 0) {
@@ -278,7 +274,7 @@ export class ServerRegistration {
 
     serverElement.id = `container_${this.serverId}`
     serverElement.innerHTML = `<div class="column column-favicon">
-        <img class="server-favicon" src="${latestPing.favicon || MISSING_FAVICON}" id="favicon_${this.serverId}" title="${this.data.name}\n${formatMinecraftServerAddress(this.data.ip, this.data.port)}">
+        <img class="server-favicon" src="${latestPing.favicon || MISSING_FAVICON}" id="favicon_${this.serverId}" title="${this.data.name}\n${this.data.ip}">
         <span class="server-rank" id="ranking_${this.serverId}"></span>
       </div>
       <div class="column column-status">
@@ -287,7 +283,6 @@ export class ServerRegistration {
         <span class="server-label" id="player-count_${this.serverId}">Players: <span class="server-value" id="player-count-value_${this.serverId}"></span></span>
         <span class="server-label" id="peak_${this.serverId}">${this._app.publicConfig.graphDurationLabel} Peak: <span class="server-value" id="peak-value_${this.serverId}">-</span></span>
         <span class="server-label" id="record_${this.serverId}">Record: <span class="server-value" id="record-value_${this.serverId}">-</span></span>
-        <span class="server-label" id="version_${this.serverId}"></span>
       </div>
       <div class="column column-graph" id="chart_${this.serverId}"></div>`
 

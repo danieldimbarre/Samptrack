@@ -55,7 +55,7 @@ const SORT_OPTIONS = [
 ]
 
 const SORT_OPTION_INDEX_DEFAULT = 0
-const SORT_OPTION_INDEX_STORAGE_KEY = 'minetrack_sort_option_index'
+const SORT_OPTION_INDEX_STORAGE_KEY = 'samptrack_sort_option_index'
 
 export class SortController {
   constructor (app) {

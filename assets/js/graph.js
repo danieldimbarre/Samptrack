@@ -7,8 +7,8 @@ import { uPlotTooltipPlugin } from './plugins'
 
 import { FAVORITE_SERVERS_STORAGE_KEY } from './favorites'
 
-const HIDDEN_SERVERS_STORAGE_KEY = 'minetrack_hidden_servers'
-const SHOW_FAVORITES_STORAGE_KEY = 'minetrack_show_favorites'
+const HIDDEN_SERVERS_STORAGE_KEY = 'samptrack_hidden_servers'
+const SHOW_FAVORITES_STORAGE_KEY = 'samptrack_show_favorites'
 
 export class GraphDisplayManager {
   constructor (app) {
@@ -362,7 +362,7 @@ export class GraphDisplayManager {
   }
 
   handleServerButtonClick = (event) => {
-    const serverId = parseInt(event.target.getAttribute('minetrack-server-id'))
+    const serverId = parseInt(event.target.getAttribute('samptrack-server-id'))
     const serverRegistration = this._app.serverRegistry.getServerRegistration(serverId)
 
     if (serverRegistration.isVisible !== event.target.checked) {
@@ -377,7 +377,7 @@ export class GraphDisplayManager {
   }
 
   handleShowButtonClick = (event) => {
-    const showType = event.target.getAttribute('minetrack-show-type')
+    const showType = event.target.getAttribute('samptrack-show-type')
 
     // If set to "Only Favorites", set internal state so that
     // visible graphData is automatically updating when a ServerRegistration's #isVisible changes
@@ -431,7 +431,7 @@ export class GraphDisplayManager {
 
   updateCheckboxes () {
     document.querySelectorAll('.graph-control').forEach((checkbox) => {
-      const serverId = parseInt(checkbox.getAttribute('minetrack-server-id'))
+      const serverId = parseInt(checkbox.getAttribute('samptrack-server-id'))
       const serverRegistration = this._app.serverRegistry.getServerRegistration(serverId)
 
       checkbox.checked = serverRegistration.isVisible

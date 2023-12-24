@@ -43,61 +43,6 @@ export class Caption {
   }
 }
 
-// Minecraft Java Edition default server port: 25565
-// Minecraft Bedrock Edition default server port: 19132
-const MINECRAFT_DEFAULT_PORTS = [25565, 19132]
-
-export function formatMinecraftServerAddress (ip, port) {
-  if (port && !MINECRAFT_DEFAULT_PORTS.includes(port)) {
-    return `${ip}:${port}`
-  }
-  return ip
-}
-
-// Detect gaps in versions by matching their indexes to knownVersions
-export function formatMinecraftVersions (versions, knownVersions) {
-  if (!versions || !versions.length || !knownVersions || !knownVersions.length) {
-    return
-  }
-
-  let currentVersionGroup = []
-  const versionGroups = []
-
-  for (let i = 0; i < versions.length; i++) {
-    // Look for value mismatch between the previous index
-    // Require i > 0 since lastVersionIndex is undefined for i === 0
-    if (i > 0 && versions[i] - versions[i - 1] !== 1) {
-      versionGroups.push(currentVersionGroup)
-      currentVersionGroup = []
-    }
-
-    currentVersionGroup.push(versions[i])
-  }
-
-  // Ensure the last versionGroup is always pushed
-  if (currentVersionGroup.length > 0) {
-    versionGroups.push(currentVersionGroup)
-  }
-
-  if (versionGroups.length === 0) {
-    return
-  }
-
-  // Remap individual versionGroups values into named versions
-  return versionGroups.map(versionGroup => {
-    const startVersion = knownVersions[versionGroup[0]]
-
-    if (versionGroup.length === 1) {
-      // A versionGroup may contain a single version, only return its name
-      // This is a cosmetic catch to avoid version labels like 1.0-1.0
-      return startVersion
-    } else {
-      const endVersion = knownVersions[versionGroup[versionGroup.length - 1]]
-      return `${startVersion}-${endVersion}`
-    }
-  }).join(', ')
-}
-
 export function formatTimestampSeconds (secs) {
   const date = new Date(0)
   date.setUTCSeconds(secs)

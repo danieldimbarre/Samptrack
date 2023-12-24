@@ -40,7 +40,7 @@ docker-compose down
 ```
 
 ## Nginx reverse proxy
-The following configuration enables Nginx to act as reverse proxy for a Minetrack instance that is available at port 8080 on localhost:
+The following configuration enables Nginx to act as reverse proxy for a samptrack instance that is available at port 8080 on localhost:
 ```
 server {
     server_name samp.danieldimbarre.pl;

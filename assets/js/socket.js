@@ -79,7 +79,7 @@ export class SocketManager {
 
             if (serverRegistration) {
               serverRegistration.handlePing(serverUpdate, payload.timestamp)
-              serverRegistration.updateServerStatus(serverUpdate, this._app.publicConfig.minecraftVersions)
+              serverRegistration.updateServerStatus(serverUpdate)
             }
           }
 
@@ -111,7 +111,7 @@ export class SocketManager {
               const serverRegistration = this._app.serverRegistry.getServerRegistration(serverName)
 
               controlsHTML += `<td><label>
-                <input type="checkbox" class="graph-control" minetrack-server-id="${serverRegistration.serverId}" ${serverRegistration.isVisible ? 'checked' : ''}>
+                <input type="checkbox" class="graph-control" samptrack-server-id="${serverRegistration.serverId}" ${serverRegistration.isVisible ? 'checked' : ''}>
                 ${serverName}
                 </label></td>`
 

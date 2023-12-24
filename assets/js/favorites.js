@@ -1,4 +1,4 @@
-export const FAVORITE_SERVERS_STORAGE_KEY = 'minetrack_favorite_servers'
+export const FAVORITE_SERVERS_STORAGE_KEY = 'samptrack_favorite_servers'
 
 export class FavoritesManager {
   constructor (app) {
