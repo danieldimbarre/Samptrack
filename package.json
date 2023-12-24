@@ -1,7 +1,7 @@
 {
-  "name": "minetrack",
+  "name": "samptrack",
   "version": "5.6.1",
-  "description": "A Minecraft server tracker that lets you focus on the basics.",
+  "description": "A SAMP server tracker that lets you focus on the basics.",
   "dependencies": {
     "finalhandler": "^1.1.2",
     "mcpe-ping-fixed": "0.0.3",
@@ -15,17 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cryptkeeper/Minetrack.git"
+    "url": "git+https://github.com/danieldimbarre/samptrack.git"
   },
-  "keywords": [
-    "minetrack"
-  ],
-  "author": "Nick Krecklow <hello@npm.nklow.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Cryptkeeper/Minetrack/issues"
-  },
-  "homepage": "https://github.com/Cryptkeeper/Minetrack#README",
   "engines": {
     "node": ">=12.4.0"
   },
