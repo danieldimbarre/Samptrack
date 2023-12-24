@@ -1,12 +1,72 @@
 [
 	{
-		"name": "Hypixel",
-		"ip": "mc.hypixel.net",
-		"type": "PC"
+		"name": "Spectrum RPG",
+		"ip": "ip.spectrumrpg.com",
+		"type": "SAMP"
 	},
 	{
-		"name": "CubeCraft",
-		"ip": "play.cubecraft.net",
-		"type": "PC"
+		"name": "Rede Paradox #1",
+		"ip": "ip.redeparadox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Rede Paradox #2",
+		"ip": "ip2.redeparadox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Stars",
+		"ip": "66.70.157.103",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Shox #1",
+		"ip": "ip1.brasilplayshox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Shox #2",
+		"ip": "ip2.brasilplayshox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Shox #3",
+		"ip": "ip3.brasilplayshox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Shox #4",
+		"ip": "ip4.brasilplayshox.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Horizonte #1",
+		"ip": "ip.horizonte-rp.com",
+		"type": "SAMP"
+	},
+	{
+		"name": "Horizonte #2",
+		"ip": "ip2.horizonte-rp.com",
+		"type": "SAMP"
+	},
+	{
+		"name": "Horizonte #3",
+		"ip": "ip3.horizonte-rp.com",
+		"type": "SAMP"
+	},
+	{
+		"name": "Horizonte #4",
+		"ip": "ip4.horizonte-rp.com",
+		"type": "SAMP"
+	},
+	{
+		"name": "Brasil Play Games",
+		"ip": "bpg.brasilplaygames.com.br",
+		"type": "SAMP"
+	},
+	{
+		"name": "Vortex City",
+		"ip": "131.196.196.88",
+		"type": "SAMP"
 	}
 ]
