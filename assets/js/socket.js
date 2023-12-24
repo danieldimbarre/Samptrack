@@ -91,7 +91,6 @@ export class SocketManager {
             this._app.graphDisplayManager.redraw()
           }
 
-          this._app.percentageBar.redraw()
           this._app.updateGlobalStats()
 
           break
