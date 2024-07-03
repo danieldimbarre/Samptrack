@@ -8,7 +8,7 @@ RUN chmod +x /sbin/tini
 
 # install sqlite3
 RUN apt-get update                                                   \
- && apt-get install    --quiet --yes --no-install-recommends sqlite3 \
+ && apt-get install    --quiet --yes --no-install-recommends sqlite3
 
 # copy samptrack files
 WORKDIR /usr/src/samptrack
